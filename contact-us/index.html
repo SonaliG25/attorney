@@ -99,7 +99,8 @@
     <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
     <button type="submit">Submit</button>
   </form>
-  <script>
+  
+ <script>
   document.getElementById("caseForm").addEventListener("submit", function (e) {
     e.preventDefault();
     const form = e.target;
@@ -111,7 +112,7 @@
     })
     .then(res => res.text())
     .then(text => {
-      if (text.includes("window.location.href")) {
+      if (text.trim() === "success") {
         window.location.href = "/thank-you";
       } else {
         alert("Form submitted, but there was an issue. Please try again.");
