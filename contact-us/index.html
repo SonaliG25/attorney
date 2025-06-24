@@ -100,24 +100,45 @@
     <button type="submit">Submit</button>
   </form>
   
- <script>
+ <style>
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top: 2px solid #000;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
   document.getElementById("caseForm").addEventListener("submit", function (e) {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const submitButton = form.querySelector("button[type='submit']");
 
-    // Set loading state
+    // Add loading state
     submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
+    submitButton.innerHTML = 'Submitting... <span class="spinner"></span>';
 
     fetch("https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec", {
       method: "POST",
-      body: formData
+      body: formData,
+      cache: "no-cache"  // prevent browser cache issues
     })
     .then(res => res.text())
     .then(text => {
-      if (text.trim() === "success") {
+      console.log("Response:", text); // debug output
+      if (text.trim().toLowerCase().includes("success")) {
         window.location.href = "/thank-you";
       } else {
         alert("Form submitted, but there was an issue. Please try again.");
@@ -133,6 +154,7 @@
     });
   });
 </script>
+
 
 
 </body>
