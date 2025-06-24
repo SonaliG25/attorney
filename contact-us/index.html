@@ -75,24 +75,6 @@
   height: auto;
 }
 
-.consent-row {
-  display: flex;
-  align-items: flex-start;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-
-.consent-row input[type="checkbox"] {
-  margin-top: 4px;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-.consent-row label {
-  line-height: 1.4;
-  flex: 1;
-}
-
 
   </style>
 </head>
@@ -126,12 +108,9 @@
       <option value="Oxycodone/Oxycontin">Oxycodone/Oxycontin</option>
     </select>
   
-   <div class="checkbox-wrapper">
-  <input type="checkbox" id="consent" name="consent" value="Agreed" required />
-  <label for="consent">
-    I Agree to be contacted via Calls, SMS & Email by a representative of <strong>ATTORNEY FOR MASS TORT</strong> & its Partners.
-  </label>
-</div>
+  <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+  By filling up this form, you agree to be contacted via Calls, SMS & Email by a representative of <strong>ATTORNEY FOR MASS TORT</strong> & its Partners.
+</p>
 
     <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
     <button type="submit">Submit</button>
