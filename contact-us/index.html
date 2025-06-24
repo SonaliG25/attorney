@@ -70,7 +70,7 @@
   </style>
 </head>
 <body>
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec">
+ <form id="caseForm">
     <h1>Get in Touch</h1>
     <input name="name" placeholder="Name" required />
     <input name="email" type="email" placeholder="Email" required />
@@ -99,5 +99,30 @@
     <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
     <button type="submit">Submit</button>
   </form>
+  <script>
+  document.getElementById("caseForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(text => {
+      if (text.includes("window.location.href")) {
+        window.location.href = "/thank-you";
+      } else {
+        alert("Form submitted, but there was an issue. Please try again.");
+      }
+    })
+    .catch(err => {
+      console.error("Submission error:", err);
+      alert("Something went wrong. Please try again.");
+    });
+  });
+</script>
+
 </body>
 </html>
