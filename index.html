@@ -1,75 +1,71 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Attorney Form - Mass Tort</title>
-    <script type="text/javascript">
-        (function () {
-            var tf = document.createElement('script');
-            tf.type = 'text/javascript'; tf.async = true;
-            tf.src = 'https://api.trustedform.com/trustedform.js?field=tf_leadid';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(tf, s);
-        })();
-    </script>
-    <style>
-        body {
-            background-color: #ffff99;
-            font-family: sans-serif;
-            padding: 2rem;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mass Tort Legal Assistance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background: linear-gradient(135deg, #000000, #2b2b2b);
+    }
 
-        form {
-            max-width: 500px;
-            margin: auto;
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
 
-        input,
-        select {
-            width: 100%;
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-        button {
-            background: black;
-            color: yellow;
-            padding: 0.75rem;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 4px;
-        }
-    </style>
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    a.button {
+      background: yellow;
+      color: black;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    a.button:hover {
+      background: #ffdd00;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
 </head>
-
 <body>
-    <h1 style="text-align: center;">Get in Touch</h1>
-    <form method="POST"
-        action="https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec">
-        <input name="name" placeholder="Name" required />
-        <input name="email" type="email" placeholder="Email" required />
-        <input name="phone" type="tel" placeholder="Phone" required />
-        <input name="address" placeholder="Address" />
-        <select name="case" required>
-            <option value="">--- Select Case Type ---</option>
-            <option value="Family Law">Family Law</option>
-            <option value="Divorce">Divorce</option>
-            <option value="Criminal">Criminal</option>
-        </select>
-        <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
-        <button type="submit">Submit</button>
-    </form>
+  <div class="container">
+    <h1>Fight for Your Rights</h1>
+    <p>If you or a loved one have been impacted by a legal issue, we're here to help.</p>
+    <a class="button" href="/contact-us/">Get a Free Case Review</a>
+    <footer>
+      &copy; 2025 attorneyformasstort.com | All rights reserved.
+    </footer>
+  </div>
 </body>
-
 </html>
