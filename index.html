@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attorney Form - Mass Tort</title>
+    <script type="text/javascript">
+        (function () {
+            var tf = document.createElement('script');
+            tf.type = 'text/javascript'; tf.async = true;
+            tf.src = 'https://api.trustedform.com/trustedform.js?field=tf_leadid';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(tf, s);
+        })();
+    </script>
+    <style>
+        body {
+            background-color: #ffff99;
+            font-family: sans-serif;
+            padding: 2rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        select {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: black;
+            color: yellow;
+            padding: 0.75rem;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Get in Touch</h1>
+    <form method="POST"
+        action="https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec">
+        <input name="name" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="phone" type="tel" placeholder="Phone" required />
+        <input name="address" placeholder="Address" />
+        <select name="case" required>
+            <option value="">--- Select Case Type ---</option>
+            <option value="Family Law">Family Law</option>
+            <option value="Divorce">Divorce</option>
+            <option value="Criminal">Criminal</option>
+        </select>
+        <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
