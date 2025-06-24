@@ -1,90 +1,103 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Attorney Form - Mass Tort</title>
-    <script type="text/javascript">
-        (function () {
-            var tf = document.createElement('script');
-            tf.type = 'text/javascript'; tf.async = true;
-            tf.src = 'https://api.trustedform.com/trustedform.js?field=tf_leadid';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(tf, s);
-        })();
-    </script>
-    <style>
-        body {
-            background-color: #ffff99;
-            font-family: sans-serif;
-            padding: 2rem;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Free Case Review</title>
+  <script type="text/javascript">
+    (function () {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript'; tf.async = true;
+      tf.src = 'https://api.trustedform.com/trustedform.js?field=tf_leadid';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #000000, #2b2b2b);
+      color: #fff;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        form {
-            max-width: 500px;
-            margin: auto;
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+    form {
+      background: #fff;
+      color: #000;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
 
-        input,
-        select {
-            width: 100%;
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #000;
+    }
 
-        button {
-            background: black;
-            color: yellow;
-            padding: 0.75rem;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 4px;
-        }
-    </style>
+    input,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background: black;
+      color: yellow;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #222;
+    }
+  </style>
 </head>
-
 <body>
-    <h1 style="text-align: center;">Get in Touch</h1>
-    <form method="POST"
-        action="https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec">
-        <input name="name" placeholder="Name" required />
-        <input name="email" type="email" placeholder="Email" required />
-        <input name="phone" type="tel" placeholder="Phone" required />
-        <input name="address" placeholder="Address" />
-       <select name="case" required>
-  <option value="">--- Select Case Type ---</option>
-  <option value="Baby Milk Formula (NEC)">Baby Milk Formula (NEC)</option>
-  <option value="Zantac">Zantac</option>
-  <option value="RoundUp">RoundUp</option>
-  <option value="Talcum">Talcum</option>
-  <option value="Paraquat">Paraquat</option>
-  <option value="TVM">TVM</option>
-  <option value="Hernia Mesh">Hernia Mesh</option>
-  <option value="Camp Lejeune">Camp Lejeune</option>
-  <option value="Hurricane IDA">Hurricane IDA</option>
-  <option value="Mesothelioma">Mesothelioma</option>
-  <option value="AFFF (Aqueous Film Forming Foam)">AFFF (Aqueous Film Forming Foam)</option>
-  <option value="Hair Relaxer">Hair Relaxer</option>
-  <option value="Depo Provera">Depo Provera</option>
-  <option value="Rideshare">Rideshare</option>
-  <option value="Paraguard">Paraguard</option>
-  <option value="Asbestos">Asbestos</option>
-  <option value="Oxycodone/Oxycontin">Oxycodone/Oxycontin</option>
-</select>
-
-        <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
-        <button type="submit">Submit</button>
-    </form>
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec">
+    <h1>Get in Touch</h1>
+    <input name="name" placeholder="Name" required />
+    <input name="email" type="email" placeholder="Email" required />
+    <input name="phone" type="tel" placeholder="Phone" required />
+    <input name="address" placeholder="Address" />
+    <select name="case" required>
+      <option value="">--- Select Case Type ---</option>
+      <option value="Baby Milk Formula (NEC)">Baby Milk Formula (NEC)</option>
+      <option value="Zantac">Zantac</option>
+      <option value="RoundUp">RoundUp</option>
+      <option value="Talcum">Talcum</option>
+      <option value="Paraquat">Paraquat</option>
+      <option value="TVM">TVM</option>
+      <option value="Hernia Mesh">Hernia Mesh</option>
+      <option value="Camp Lejeune">Camp Lejeune</option>
+      <option value="Hurricane IDA">Hurricane IDA</option>
+      <option value="Mesothelioma">Mesothelioma</option>
+      <option value="AFFF (Aqueous Film Forming Foam)">AFFF (Aqueous Film Forming Foam)</option>
+      <option value="Hair Relaxer">Hair Relaxer</option>
+      <option value="Depo Provera">Depo Provera</option>
+      <option value="Rideshare">Rideshare</option>
+      <option value="Paraguard">Paraguard</option>
+      <option value="Asbestos">Asbestos</option>
+      <option value="Oxycodone/Oxycontin">Oxycodone/Oxycontin</option>
+    </select>
+    <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
+    <button type="submit">Submit</button>
+  </form>
 </body>
-
 </html>
