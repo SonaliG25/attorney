@@ -75,6 +75,20 @@
   height: auto;
 }
 
+    .checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  margin-top: 4px;
+  transform: scale(1.2);
+}
+
   </style>
 </head>
 <body>
@@ -106,10 +120,14 @@
       <option value="Asbestos">Asbestos</option>
       <option value="Oxycodone/Oxycontin">Oxycodone/Oxycontin</option>
     </select>
-    <label style="display: flex; align-items: flex-start; font-size: 0.9rem; margin-bottom: 1rem;">
-    <input type="checkbox" name="consent" required style="margin-top: 3px; margin-right: 10px;" />
+  
+   <div class="checkbox-wrapper">
+  <input type="checkbox" id="consent" name="consent" value="Agreed" required />
+  <label for="consent">
     I Agree to be contacted via Calls, SMS & Email by a representative of <strong>ATTORNEY FOR MASS TORT</strong> & its Partners.
   </label>
+</div>
+
     <input type="hidden" name="tf_leadid" id="tf_leadid" value="" />
     <button type="submit">Submit</button>
   </form>
