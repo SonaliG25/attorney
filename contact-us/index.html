@@ -105,6 +105,11 @@
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    const submitButton = form.querySelector("button[type='submit']");
+
+    // Set loading state
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
 
     fetch("https://script.google.com/macros/s/AKfycbzbq1g3OBG3NS_YawHGDD9ZwemLYdDsgsSysDHNmpCo2fbf08WT9ZDNHHcYHQxV6MT6/exec", {
       method: "POST",
@@ -116,14 +121,19 @@
         window.location.href = "/thank-you";
       } else {
         alert("Form submitted, but there was an issue. Please try again.");
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
       }
     })
     .catch(err => {
       console.error("Submission error:", err);
       alert("Something went wrong. Please try again.");
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit";
     });
   });
 </script>
+
 
 </body>
 </html>
